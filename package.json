@@ -1,0 +1,30 @@
+{
+  "name": "web-audio-stream",
+  "description": "NodeJS-style stream for Web Audio API",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "author": "Raymond Hammarling",
+  "scripts": {
+    "lint": "eslint src/ test/",
+    "test": "mocha --compilers js:babel/register,es6:babel/register,es6.js:babel/register test/",
+    "build": "babel --stage 0 -d lib/ src/",
+    "pretest": "npm run lint",
+    "prebuild": "npm run test",
+    "watch": "onchange src/ -- npm run build && echo Done",
+    "dev": "npm run watch",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel": "latest",
+    "babel-eslint": "^4.0.10",
+    "chai": "latest",
+    "eslint": "latest",
+    "eslint-config-kellyirc": "^2.0.0",
+    "mocha": "latest",
+    "onchange": "latest"
+  },
+  "dependencies": {
+    "stream-combiner": "^0.2.2"
+  }
+}
