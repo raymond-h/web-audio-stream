@@ -5,6 +5,15 @@
   "license": "MIT",
   "main": "lib/index.js",
   "author": "Raymond Hammarling",
+  "keywords": [
+    "webaudio",
+    "audio",
+    "stream"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymond-h/web-audio-stream.git"
+  },
   "scripts": {
     "lint": "eslint src/ test/",
     "test": "mocha --compilers js:babel/register,es6:babel/register,es6.js:babel/register test/",
